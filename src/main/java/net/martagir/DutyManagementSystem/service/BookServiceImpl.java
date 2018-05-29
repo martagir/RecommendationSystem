@@ -1,7 +1,7 @@
-package net.proselyte.bookmanager.service;
+package net.martagir.DutyManagementSystem.service;
 
-import net.proselyte.bookmanager.dao.BookDao;
-import net.proselyte.bookmanager.model.Book;
+import net.martagir.DutyManagementSystem.dao.BookDao;
+import net.martagir.DutyManagementSystem.model.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package net.proselyte.bookmanager.model;
+package net.martagir.DutyManagementSystem.model;
 
 import javax.persistence.*;
 

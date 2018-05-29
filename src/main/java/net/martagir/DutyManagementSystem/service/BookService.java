@@ -1,6 +1,6 @@
-package net.proselyte.bookmanager.service;
+package net.martagir.DutyManagementSystem.service;
 
-import net.proselyte.bookmanager.model.Book;
+import net.martagir.DutyManagementSystem.model.Book;
 
 import java.util.List;
 

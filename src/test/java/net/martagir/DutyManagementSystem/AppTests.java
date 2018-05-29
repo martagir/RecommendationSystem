@@ -1,4 +1,4 @@
-package net.proselyte.bookmanager;
+package net.martagir.DutyManagementSystem;
 
 import org.junit.Before;
 import org.junit.Test;

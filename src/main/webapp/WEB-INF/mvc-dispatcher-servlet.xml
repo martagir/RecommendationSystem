@@ -6,7 +6,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="net.proselyte.bookmanager"/>
+    <context:component-scan base-package="net.martagir.DutyManagementSystem"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -18,9 +18,9 @@
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://localhost:3306/recommendSystemDb"/>
+                  value="jdbc:mysql://localhost:3306/DutyManagementSystem"/>
         <property name="username" value="root"/>
-        <property name="password" value="admin"/>
+        <property name="password" value="password"/>
     </bean>
 
     <!-- Hibernate 4 SessionFactory Bean definition -->
@@ -29,7 +29,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>net.proselyte.bookmanager.model.Book</value>
+                <value>net.martagir.DutyManagementSystem.model.Book</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -42,15 +42,15 @@
     </bean>
 
     <!--BookDao and BookService beans-->
-    <bean id="bookDao" class="net.proselyte.bookmanager.dao.BookDaoImpl">
+    <bean id="bookDao" class="net.martagir.DutyManagementSystem.dao.BookDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="bookService" class="net.proselyte.bookmanager.service.BookServiceImpl">
+    <bean id="bookService" class="net.martagir.DutyManagementSystem.service.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 
-    <context:component-scan base-package="net.proselyte.bookmanager"/>
+    <context:component-scan base-package="net.martagir.DutyManagementSystem"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 

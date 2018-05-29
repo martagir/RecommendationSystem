@@ -1,6 +1,6 @@
-package net.proselyte.bookmanager.dao;
+package net.martagir.DutyManagementSystem.dao;
 
-import net.proselyte.bookmanager.model.Book;
+import net.martagir.DutyManagementSystem.model.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
