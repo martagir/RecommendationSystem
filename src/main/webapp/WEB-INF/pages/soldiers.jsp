@@ -5,7 +5,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title>Books Page</title>
+    <title>Soldiers Page</title>
 
     <style type="text/css">
         .tg {
@@ -54,37 +54,37 @@
 
 <h1>Book List</h1>
 
-<c:if test="${!empty listBooks}">
+<c:if test="${!empty listSoldiers}">
     <table class="tg">
         <tr>
             <th width="80">ID</th>
-            <th width="120">Title</th>
-            <th width="120">Author</th>
-            <th width="120">Price</th>
+            <th width="120">Surname</th>
+            <th width="120">Name</th>
+            <th width="120">MiddleName</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
-        <c:forEach items="${listBooks}" var="book">
+        <c:forEach items="${listSoldiers}" var="soldier">
             <tr>
                 <td>${book.id}</td>
-                <td><a href="/bookdata/${book.id}" target="_blank">${book.bookTitle}</a></td>
-                <td>${book.bookAuthor}</td>
-                <td>${book.price/100}${book.price%100}</td>
-                <td><a href="<c:url value='/edit/${book.id}'/>">Edit</a></td>
-                <td><a href="<c:url value='/remove/${book.id}'/>">Delete</a></td>
+                <td><a href="/soldierdata/${soldier.id}" target="_blank">${soldier.surname}</a></td>
+                <td>${soldier.name}</td>
+                <td>${soldier.middlename}</td>
+                <td><a href="<c:url value='/edit/${soldier.id}'/>">Edit</a></td>
+                <td><a href="<c:url value='/remove/${soldier.id}'/>">Delete</a></td>
             </tr>
         </c:forEach>
     </table>
 </c:if>
 
 
-<h1>Add a Book</h1>
+<h1>Add a Soldier</h1>
 
-<c:url var="addAction" value="/books/add"/>
+<c:url var="addAction" value="/soldiers/add"/>
 
-<form:form action="${addAction}" commandName="book">
+<form:form action="${addAction}" commandName="soldier">
     <table>
-        <c:if test="${!empty book.bookTitle}">
+        <c:if test="${!empty soldier.name}">
             <tr>
                 <td>
                     <form:label path="id">
