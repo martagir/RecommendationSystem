@@ -52,7 +52,7 @@
 <br/>
 <br/>
 
-<h1>Book List</h1>
+<h1>Soldier List</h1>
 
 <c:if test="${!empty listSoldiers}">
     <table class="tg">
@@ -66,7 +66,7 @@
         </tr>
         <c:forEach items="${listSoldiers}" var="soldier">
             <tr>
-                <td>${book.id}</td>
+                <td>${soldier.id}</td>
                 <td><a href="/soldierdata/${soldier.id}" target="_blank">${soldier.surname}</a></td>
                 <td>${soldier.name}</td>
                 <td>${soldier.middlename}</td>
@@ -99,43 +99,43 @@
         </c:if>
         <tr>
             <td>
-                <form:label path="bookTitle">
-                    <spring:message text="Title"/>
+                <form:label path="soldierName">
+                    <spring:message text="Name"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="bookTitle"/>
+                <form:input path="soldierName"/>
             </td>
         </tr>
-        <tr>
-            <td>
-                <form:label path="bookAuthor">
-                    <spring:message text="Author"/>
-                </form:label>
-            </td>
-            <td>
-                <form:input path="bookAuthor"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form:label path="price">
-                    <spring:message text="Price"/>
-                </form:label>
-            </td>
-            <td>
-                <form:input path="price"/>
-            </td>
-        </tr>
+        <%--<tr>--%>
+            <%--<td>--%>
+                <%--<form:label path="bookAuthor">--%>
+                    <%--<spring:message text="Author"/>--%>
+                <%--</form:label>--%>
+            <%--</td>--%>
+            <%--<td>--%>
+                <%--<form:input path="bookAuthor"/>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+            <%--<td>--%>
+                <%--<form:label path="price">--%>
+                    <%--<spring:message text="Price"/>--%>
+                <%--</form:label>--%>
+            <%--</td>--%>
+            <%--<td>--%>
+                <%--<form:input path="price"/>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
         <tr>
             <td colspan="2">
-                <c:if test="${!empty book.bookTitle}">
+                <c:if test="${!empty soldier.soldierName}">
                     <input type="submit"
-                           value="<spring:message text="Edit Book"/>"/>
+                           value="<spring:message text="Edit Soldier"/>"/>
                 </c:if>
-                <c:if test="${empty book.bookTitle}">
+                <c:if test="${empty soldier.soldierName}">
                     <input type="submit"
-                           value="<spring:message text="Add Book"/>"/>
+                           value="<spring:message text="Add Soldier"/>"/>
                 </c:if>
             </td>
         </tr>

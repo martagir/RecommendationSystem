@@ -41,13 +41,13 @@
         </property>
     </bean>
 
-    <!--BookDao and BookService beans-->
-    <bean id="bookDao" class="net.martagir.DutyManagementSystem.dao.BookDaoImpl">
+    <!--SoldierDao and SoldierService beans-->
+    <bean id="soldierDao" class="net.martagir.DutyManagementSystem.dao.SoldierDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="bookService" class="net.martagir.DutyManagementSystem.service.BookServiceImpl">
-        <property name="bookDao" ref="bookDao"/>
+    <bean id="soldierService" class="net.martagir.DutyManagementSystem.service.SoldierServiceImpl">
+        <property name="soldierDao" ref="soldierDao"/>
     </bean>
 
     <context:component-scan base-package="net.martagir.DutyManagementSystem"/>
