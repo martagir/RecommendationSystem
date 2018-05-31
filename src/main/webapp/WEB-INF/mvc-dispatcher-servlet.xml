@@ -18,7 +18,7 @@
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://localhost:3306/DutyManagementSystem"/>
+                  value="jdbc:mysql://localhost:3306/recommendsystemdb"/>
         <property name="username" value="root"/>
         <property name="password" value="password"/>
     </bean>
@@ -29,7 +29,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>net.martagir.DutyManagementSystem.model.Book</value>
+                <value>net.martagir.DutyManagementSystem.model.Soldier</value>
             </list>
         </property>
         <property name="hibernateProperties">

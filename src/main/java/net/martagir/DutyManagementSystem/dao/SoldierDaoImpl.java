@@ -60,7 +60,7 @@ public class SoldierDaoImpl implements SoldierDao {
     @SuppressWarnings("unchecked")
     public List<Soldier> listSoldiers() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<Soldier> soldierList = session.createQuery("from Soldiers").list();
+        List<Soldier> soldierList = session.createQuery("from Soldier").list();
 
         for (Soldier soldier : soldierList) {
             logger.info("Soldier list: " + soldier);

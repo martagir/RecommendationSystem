@@ -61,6 +61,9 @@
             <th width="120">Surname</th>
             <th width="120">Name</th>
             <th width="120">MiddleName</th>
+            <th width="120">DateOfConscription</th>
+            <th width="120">MilitaryCard</th>
+            <th width="120">Rank_id</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
@@ -69,7 +72,10 @@
                 <td>${soldier.id}</td>
                 <td><a href="/soldierdata/${soldier.id}" target="_blank">${soldier.surname}</a></td>
                 <td>${soldier.name}</td>
-                <td>${soldier.middlename}</td>
+                <td>${soldier.middleName}</td>
+                <td>${soldier.dateOfConscription}</td>
+                <td>${soldier.militaryCard}</td>
+                <td>${soldier.rank_id}</td>
                 <td><a href="<c:url value='/edit/${soldier.id}'/>">Edit</a></td>
                 <td><a href="<c:url value='/remove/${soldier.id}'/>">Delete</a></td>
             </tr>
@@ -99,41 +105,71 @@
         </c:if>
         <tr>
             <td>
-                <form:label path="soldierName">
+                <form:label path="surname">
+                    <spring:message text="Surname"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="surname"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="name">
                     <spring:message text="Name"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="soldierName"/>
+                <form:input path="name"/>
             </td>
         </tr>
-        <%--<tr>--%>
-            <%--<td>--%>
-                <%--<form:label path="bookAuthor">--%>
-                    <%--<spring:message text="Author"/>--%>
-                <%--</form:label>--%>
-            <%--</td>--%>
-            <%--<td>--%>
-                <%--<form:input path="bookAuthor"/>--%>
-            <%--</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td>--%>
-                <%--<form:label path="price">--%>
-                    <%--<spring:message text="Price"/>--%>
-                <%--</form:label>--%>
-            <%--</td>--%>
-            <%--<td>--%>
-                <%--<form:input path="price"/>--%>
-            <%--</td>--%>
-        <%--</tr>--%>
+        <tr>
+            <td>
+                <form:label path="middleName">
+                    <spring:message text="MiddleName"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="middleName"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="dateOfConscription">
+                    <spring:message text="DateOfConscription"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="dateOfConscription"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="militaryCard">
+                    <spring:message text="MilitaryCard"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="militaryCard"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="rank_id">
+                    <spring:message text="Rank"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="rank_id"/>
+            </td>
+        </tr>
         <tr>
             <td colspan="2">
-                <c:if test="${!empty soldier.soldierName}">
+                <c:if test="${!empty soldier.name}">
                     <input type="submit"
                            value="<spring:message text="Edit Soldier"/>"/>
                 </c:if>
-                <c:if test="${empty soldier.soldierName}">
+                <c:if test="${empty soldier.name}">
                     <input type="submit"
                            value="<spring:message text="Add Soldier"/>"/>
                 </c:if>
