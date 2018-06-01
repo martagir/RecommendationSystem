@@ -45,9 +45,15 @@
     <bean id="soldierDao" class="net.martagir.DutyManagementSystem.dao.SoldierDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
+    <bean id="rankDao" class="net.martagir.DutyManagementSystem.dao.RankDaoImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
 
     <bean id="soldierService" class="net.martagir.DutyManagementSystem.service.SoldierServiceImpl">
         <property name="soldierDao" ref="soldierDao"/>
+    </bean>
+    <bean id="rankService" class="net.martagir.DutyManagementSystem.service.RankServiceImpl">
+        <property name="rankDao" ref="rankDao"/>
     </bean>
 
     <context:component-scan base-package="net.martagir.DutyManagementSystem"/>

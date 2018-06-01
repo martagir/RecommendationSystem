@@ -18,4 +18,13 @@ public class Rank {
 
     @Column(name = "SHORTNAME")
     private String shortName;
+
+    @Override
+    public String toString() {
+        return "Rank{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", shortName='" + shortName + '\'' +
+                '}';
+    }
 }

@@ -55,6 +55,8 @@ public class Soldier {
     @Column(name = "NOTICE")
     private String notice;
 
+    private String rank;
+
     public int getId() {
         return id;
     }
@@ -173,6 +175,16 @@ public class Soldier {
 
     public void setNotice(String notice) {
         this.notice = notice;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+//    @ManyToOne
+//    @PrimaryKeyJoinColumn
+    public String getRank() {
+        return rank;
     }
 
     @Override

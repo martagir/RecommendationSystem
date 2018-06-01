@@ -10,7 +10,7 @@ import java.util.List;
 public interface SoldierDao {
     public void addSoldier(Soldier soldier);
 
-    public void updateSoldier(Soldier boldier);
+    public void updateSoldier(Soldier soldier);
 
     public void removeSoldier(int id);
 

@@ -64,6 +64,7 @@
             <th width="120">DateOfConscription</th>
             <th width="120">MilitaryCard</th>
             <th width="120">Rank_id</th>
+            <th width="120">Rank</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
@@ -76,6 +77,7 @@
                 <td>${soldier.dateOfConscription}</td>
                 <td>${soldier.militaryCard}</td>
                 <td>${soldier.rank_id}</td>
+                <td>${soldier.rank}</td>
                 <td><a href="<c:url value='/edit/${soldier.id}'/>">Edit</a></td>
                 <td><a href="<c:url value='/remove/${soldier.id}'/>">Delete</a></td>
             </tr>
