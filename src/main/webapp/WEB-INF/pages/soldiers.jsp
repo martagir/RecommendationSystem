@@ -2,9 +2,11 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page session="false" %>
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Soldiers Page</title>
 
     <style type="text/css">
@@ -77,7 +79,7 @@
                 <td>${soldier.dateOfConscription}</td>
                 <td>${soldier.militaryCard}</td>
                 <td>${soldier.rank_id}</td>
-                <td>${soldier.rank}</td>
+                <td>${soldier.rank.name}</td>
                 <td><a href="<c:url value='/edit/${soldier.id}'/>">Edit</a></td>
                 <td><a href="<c:url value='/remove/${soldier.id}'/>">Delete</a></td>
             </tr>

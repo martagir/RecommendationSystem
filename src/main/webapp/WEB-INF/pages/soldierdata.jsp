@@ -3,9 +3,11 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>SoldierData</title>
 
   <style type="text/css">

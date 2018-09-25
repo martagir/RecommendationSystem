@@ -55,7 +55,8 @@ public class Soldier {
     @Column(name = "NOTICE")
     private String notice;
 
-    private String rank;
+    @Transient
+    private Rank rank;
 
     public int getId() {
         return id;
@@ -177,15 +178,16 @@ public class Soldier {
         this.notice = notice;
     }
 
-    public void setRank(String rank) {
+    @ManyToOne
+    @PrimaryKeyJoinColumn
+    public Rank getRank() {
+        return rank;
+    }
+//
+    public void setRank(Rank rank) {
         this.rank = rank;
     }
 
-//    @ManyToOne
-//    @PrimaryKeyJoinColumn
-    public String getRank() {
-        return rank;
-    }
 
     @Override
     public String toString() {
